@@ -1,0 +1,16 @@
+# Sensitive data: never commit
+data/raw/
+data/processed/
+*.pdf
+
+# Env and secrets
+.env
+.env.*
+!.env.example
+
+# Node / Python
+node_modules/
+.next/
+__pycache__/
+.venv/
+.DS_Store
