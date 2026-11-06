@@ -1,0 +1,3 @@
+-- Local seed data. Runs after migrations on `supabase db reset`.
+-- Keep this file free of real addresses, MCR text, or plan data.
+-- Jurisdictions are seeded in migrations/0001_init.sql.

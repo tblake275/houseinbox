@@ -26,6 +26,6 @@
 
 ## Stack
 
-- Supabase project: TBD (separate from all AHFH projects).
+- Supabase: local stack for Phase 0 (`docs/local-dev.md`). No hosted project yet. Never put House In Box tables in an AHFH project or in `blake-spend-tracker`.
 - AHFH Construction Platform Supabase (`seyglttfkzntsnwuymzy`): read-only source. Bill of Origins is its `carbon` schema; also `estimator`, `takeoffs`, `drawings_selections`. Never write to it from House In Box work. AHFH schema changes follow the AHFH migration process in repo `tblake275/ahfh-construction-platform`.
 - Do not apply migrations to a remote project without a matching file in `supabase/migrations/`.

@@ -16,7 +16,7 @@ The first product is a **permit pre-review tool**. A builder uploads a residenti
 | `docs/glossary.md` | Terms and abbreviations. |
 | `eval/` | Grading taxonomy, match rules, takeoff tolerances. |
 | `data/` | Data rules and manifest template. Raw plan sets and MCRs are **not** committed. |
-| `supabase/migrations/` | Database schema, in order. |
+| `supabase/` | Local Supabase config, buckets, migrations, seed. Setup: `docs/local-dev.md`. |
 | `scripts/` | Ingest and parse scripts. |
 | `app/` | Web app (Next.js on Vercel). Not started. |
 

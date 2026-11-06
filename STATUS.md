@@ -11,6 +11,7 @@ Phase 0 · Data and setup (week 1)
 - Strategy doc written: https://claude.ai/artifact/LVCSVLcdMcvTT15qUbPoTk
 - MCR ground-truth research done: `docs/research/mcr-ground-truth.md`
 - Repo scaffold, schema v1, grading taxonomy v1, MCR parser stub
+- Local Supabase setup: `supabase/config.toml`, 3 private buckets, `docs/local-dev.md`. Migration 0001 tested on Postgres 16: 14 tables, RLS on all, 4 jurisdictions seeded.
 
 ## Source data found (AHFH Supabase `seyglttfkzntsnwuymzy`, read-only)
 
@@ -22,7 +23,7 @@ Phase 0 · Data and setup (week 1)
 
 ## Next tasks
 
-1. Create the House In Box Supabase project and apply `supabase/migrations/0001_init.sql`.
+1. On Travis's machine: install Docker + Supabase CLI, run `supabase start` and `supabase db reset` (see `docs/local-dev.md`).
 2. Get written AHFH terms on IP, data use, and outside work.
 3. Connect the folder of MCRs and permit sets. Fill `data/manifest_template.csv` for the first 20 projects.
 4. Run `scripts/parse_mcr.py` on the first 20 MCRs. Fix the parser until 95%+ of comments parse.
@@ -32,7 +33,12 @@ Phase 0 · Data and setup (week 1)
 ## Blockers
 
 - AHFH data agreement not signed.
-- House In Box Supabase project not created.
+- No hosted Supabase slot. Both free slots are used (`ahfh-training`, `blake-spend-tracker`). Phase 0 runs locally. Hosted slot frees up if `ahfh-training` moves to an AHFH org on Pro.
+
+## Hosting decision
+
+- Phase 0: local Supabase only. Decision: `docs/decisions/0002-local-first.md`.
+- `blake-spend-tracker` stays on Supabase (daily SimpleFIN sync + 3 cron jobs; cannot pause).
 
 ## Open questions
 
