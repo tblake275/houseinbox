@@ -1,0 +1,15 @@
+# Takeoff grading. Answer key = AHFH estimator quantities for the same plan set.
+# A takeoff item passes when |tool - key| / key <= tolerance.
+# Values are proposed. Set final values after the first 20 projects.
+assemblies:
+  framing_lumber_bf: 0.05
+  wall_sheathing_sf: 0.03
+  roof_sheathing_sf: 0.03
+  drywall_sf: 0.03
+  roofing_sq: 0.03
+  siding_sf: 0.05
+  concrete_cy: 0.05
+  windows_count: 0.0
+  exterior_doors_count: 0.0
+  interior_doors_count: 0.0
+pass_rule: all items within tolerance
